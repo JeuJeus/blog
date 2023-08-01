@@ -6,6 +6,8 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 
+		<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
@@ -56,6 +58,6 @@
 
 		<footer></footer>
 
-		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
+		Current page: {{ page.url | htmlBaseUrl }}
 	</body>
 </html>
