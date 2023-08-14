@@ -20,6 +20,12 @@
 	--syntax-tab-size: 2;
 }
 
+@media (prefers-color-scheme: light) {
+	.jeujeus-logo {
+		filter: invert(1);
+	}
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-gray-20: #e0e0e0;
