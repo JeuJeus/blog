@@ -43,6 +43,7 @@
 
 html,
 body {
+    height: 100%;
 	padding: 0;
 	margin: 0 auto;
 	font-family: var(--font-family);
@@ -53,7 +54,14 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	max-width: 50em;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    flex-shrink: 0;
+    margin-bottom: 1em;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -90,6 +98,7 @@ a[href]:active {
 }
 
 main {
+    flex: 1 0 auto;
 	padding: 1rem;
 }
 main :first-child {

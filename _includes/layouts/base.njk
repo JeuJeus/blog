@@ -39,7 +39,7 @@
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+			<a href="/" class="home-link"><img src="/img/logo.webp" height="50" alt="JeuJeus Logo" /></a>
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 			<nav>
@@ -56,8 +56,6 @@
 			{{ content | safe }}
 		</main>
 
-		<footer></footer>
-
-		Current page: {{ page.url | htmlBaseUrl }}
+		<footer>Current page: {{ page.url | htmlBaseUrl }}</footer>
 	</body>
 </html>
