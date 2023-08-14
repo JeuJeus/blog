@@ -46,7 +46,9 @@
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
 				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+				    {% if entry.key != "Imprint" %}
+					    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+					{% endif %}
 				{%- endfor %}
 				</ul>
 			</nav>
@@ -56,6 +58,15 @@
 			{{ content | safe }}
 		</main>
 
-		<footer>Current page: {{ page.url | htmlBaseUrl }}</footer>
+		<footer>
+		    Current page: {{ page.url | htmlBaseUrl }}
+            <ul class="nav">
+            {%- for entry in collections.all | eleventyNavigation %}
+                {% if entry.key == "Imprint" or entry.key == "About Me" %}
+                    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+                {% endif %}
+            {%- endfor %}
+            </ul>
+		</footer>
 	</body>
 </html>

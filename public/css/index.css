@@ -62,6 +62,9 @@ body {
 footer {
     flex-shrink: 0;
     margin-bottom: 1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
