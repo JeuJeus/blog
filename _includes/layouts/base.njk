@@ -59,8 +59,8 @@
 		</main>
 
 		<footer>
-		    Current page: {{ page.url | htmlBaseUrl }}
-            <ul class="nav">
+		    <a href="https://jeujeus.de target="_blank">JeuJeus</a>
+
             {%- for entry in collections.all | eleventyNavigation %}
                 {% if entry.key == "Imprint" or entry.key == "About Me" %}
                     <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>

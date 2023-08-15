@@ -1,6 +1,6 @@
 ---
-title: Motivation for blogging.
-description: This post describes my motivation for starting this Blog.
+title: Motivation for blogging
+description: This post describes my motivation for starting this Blog
 date: 2023-08-15
 tags:
   - meta
