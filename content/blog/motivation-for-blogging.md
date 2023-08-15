@@ -7,18 +7,19 @@ tags:
   - blog
 ---
 
-# Why I started this Blog?
-
+## Why I started this Blog?
 Over the course of my bachelor's and master's degrees, I got into the habit of reading relevant news every day.
 Especially news, blogs and information related to my passions and work.
 As a result, I have accumulated a rather large but manageable collection of sources that I scrape through on a daily basis.  
 During this journey I noticed that I came across a lot of blog posts or news snippets that would otherwise go unnoticed by most of my peers.
-My temporary solution was to share these in relevant Slack channels, teams or via messaging services.
+In addition, I could not find a suitable place to document my own projects, experiences and hacks.
+My temporary solution was to share these in relevant Slack channels, Teams or via messaging services.
 But I quickly came up with the idea of migrating this habit of sharing valuable links to creating my own blog.  
 And that's why we're standing here and you're reading this very blog.
 
 ## What to expect out of this?
 I want to share news related to the Topics of `IT-Sec`, `Hacking`, `Coding`, `CS` and sometimes unrelated `Stuff`.  
+Also i will occasionally share my own projects, experiences and thoughts to the aforementioned Topics.  
 With this blog, I would like to share exactly those aspects of these fields that were initial precursors to my current professional career and fuelled my enthusiasm.
 
 ## How often will you blog?
