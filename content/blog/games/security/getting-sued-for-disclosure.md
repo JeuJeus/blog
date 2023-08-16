@@ -17,11 +17,11 @@ This Breach exposed 700.000 customers Datasets, consisting of several large germ
 <a href="https://www.heise.de/news/Modern-Solution-Jetzt-doch-Hackerparagraf-Verfahren-gegen-Sicherheitsforscher-9246117.html" target="_blank">Link to related Source from Mark Steier [in German]</a>
 
 This Vulnerability was disclosed to the Distributor of the Software.
-But instead of expressing gratitude - Steier was sued.
+But instead of expressing gratitude - Steier was sued.  
 <a href="https://www.heise.de/news/Modern-Solution-Jetzt-doch-Hackerparagraf-Verfahren-gegen-Sicherheitsforscher-9246117.html" target="_blank">Link to related Source [in German]</a>
 
 After some back and forth, Steier is now facing a lawsuit after the public prosecutor's office in Cologne ruled that decompiling the source code _"requires a deep understanding of programming languages and software development"_.
-Therefore he is no threated under the so called "Hackerparagraph" (§202 StGb) for _"Spying out data"_.
+Therefore he is no threated under the so called "Hackerparagraph" (§202 StGb) for _"Spying out data"_.  
 <a href="https://www.heise.de/news/Modern-Solution-Jetzt-doch-Hackerparagraf-Verfahren-gegen-Sicherheitsforscher-9246117.html" target="_blank">Link to related News Article from Heise [in German]</a>
 
 ### Consequences
