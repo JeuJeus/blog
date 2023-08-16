@@ -1,5 +1,5 @@
 ---
-title: On German Law working against Disclosure [Link in German]
+title: On German Law working against Disclosure [Links in German]
 description: The public prosecutor's office in Cologne obtains a criminal case against the security researcher in the Modern Solution trial
 date: 2023-08-16
 tags:
@@ -21,6 +21,7 @@ But instead of expressing gratitude - Steier was sued.
 <a href="https://www.heise.de/news/Modern-Solution-Jetzt-doch-Hackerparagraf-Verfahren-gegen-Sicherheitsforscher-9246117.html" target="_blank">Link to related Source [in German]</a>
 
 After some back and forth, Steier is now facing a lawsuit after the public prosecutor's office in Cologne ruled that decompiling the source code _"requires a deep understanding of programming languages and software development"_.
+Therefore he is no threated under the so called "Hackerparagraph" (§202 StGb) for _"Spying out data"_.
 <a href="https://www.heise.de/news/Modern-Solution-Jetzt-doch-Hackerparagraf-Verfahren-gegen-Sicherheitsforscher-9246117.html" target="_blank">Link to related News Article from Heise [in German]</a>
 
 ### Consequences
