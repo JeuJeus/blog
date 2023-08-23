@@ -1,5 +1,5 @@
 ---
-title: What happens when you rely on Cloud Services
+title: What happens when you rely on Cloud Services - What about your (Ops)Backups?
 description: As a result of a ransomware attack, a Danish cloud provider irrevocably loses all customer data.
 date: 2023-08-23
 tags:
@@ -7,6 +7,8 @@ tags:
   - ransomware
   - data loss
   - cloud
+  - backups
+  - desaster recovery
 ---
 
 ## Do you practice backup best practice? 
