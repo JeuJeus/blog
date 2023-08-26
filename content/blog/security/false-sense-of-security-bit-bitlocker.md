@@ -19,9 +19,10 @@ By default Bitlocker relies on transporting the Decryption Key for the encrypted
 
 The emergence of a new report on this vulnerability has reminded me of the potential issues raised by this approach. [1]  
 But this should not come as a surprise, as there was already an article on arstechnica in 2021 covering the same problem. [2]  
-This implementation presents a vulnerability as it allows for the interception of traffic between the TPM and CPU, enabling attackers to bypass disk encryption with relative ease using low-cost and relatively simple hardware.
+This implementation presents a vulnerability as it allows for the passive sniffing (no interception / MitM necessary) of traffic between the TPM and CPU, enabling attackers to bypass disk encryption with relative ease using low-cost and relatively simple hardware.
 
-The issue in this case is that, in theory, TPMs enable the use of encrypted sessions that could mitigate passive sniffing attacks, similar to how it is implemented on Linux with LUKS.[3]
+The issue in this case is that, in theory, TPMs enable the use of encrypted sessions that could mitigate passive sniffing attacks, similar to how it is implemented on Linux with LUKS.
+At the time of writing, Windows/BitLocker does not utilise that feature.[3]
 
 ### What can be done about this?
 Microsoft already provides clear documentation on BitLocker in their FAQ, recommending the addition of a PIN for the decryption process to begin. [4]
@@ -38,5 +39,5 @@ Currently, this is the standard for Linux-based systems.
 <a href="https://www.errno.fr/BypassingBitlocker.html" target="_blank">[1] - Bypassing Bitlocker using a cheap logic analyzer on a Lenovo laptop, Guillaume Quéré</a>  
 <a href="https://arstechnica.com/gadgets/2021/08/how-to-go-from-stolen-pc-to-network-intrusion-in-30-minutes/" target="_blank">[2] - Trusted platform module security defeated in 30 minutes, no soldering required, DAN GOODIN </a>  
 <a href="https://news.ycombinator.com/item?id=37250963" target="_blank">[3] - Hacker News, als0</a>  
-<a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies#what-areas-of-the-organization-need-a-more-secure-level-of-data-protection" target="_blank">[4] - Prepare an organization for BitLocker: Planning and policies, paolomatarazzo</a>
+<a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies#what-areas-of-the-organization-need-a-more-secure-level-of-data-protection" target="_blank">[4] - Prepare an organization for BitLocker: Planning and policies, paolomatarazzo</a>  
 <a href="https://ekiwi-blog.de/en/50353/bitlocker-activate-pre-boot-bitlocker-pin/" target="_blank">[5] - Bitlocker – Activate Pre-Boot Bitlocker PIN, Andy</a>
