@@ -1,0 +1,22 @@
+{
+  "short_name": "JeuJeus Blog",
+  "name": "JeuJeus Blog",
+  "icons": [
+    {
+      "src": "/img/jeujeus_192.jpeg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/jeujeus_512.jpeg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#161618",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#161618"
+}
