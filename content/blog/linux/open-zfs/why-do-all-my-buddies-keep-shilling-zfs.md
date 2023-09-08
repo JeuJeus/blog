@@ -14,7 +14,6 @@ That was exactly the case for me when a friend introduced me to ZFS.
 It wasn't until later that I had the chance to experience it for myself.
 Since then, I have become an advocate for changing the default file systems of my friends.
 
-
 ## How ZFS came to be
 ZFS was initially created for OpenSolaris by Sun Microsystems, and later adapted for FreeBSD. [2]
 Following Sun's acquisition by Oracle, ZFS was made proprietary, causing two-thirds of its original developers, including its creators, to resign and create OpenZFS, an open-source fork with
@@ -35,8 +34,18 @@ The CDDL license [4], which governs ZFS, is incompatible with the Linux Kernel's
 The CDDL license mandates that every prior developer give their approval for a license change, which is an intricate process, particularly when some of the developers are no longer available or, at worst, deceased.
 Hence, it is challenging to include ZFS in Linux Distributions as the default option.[2]
 
-## Why you should (still) use ZFS - Lets talk Features
+## Why you should use ZFS - Lets talk Features
+ZFS was developed with the following Key Points in Mind [2]:
+- Protection against data corruption. Integrity checking for both data and metadata.
+- Continuous integrity verification and automatic “self-healing” repair
+- Data redundancy with mirroring
+- Support for high storage capacities
+- Space-saving with transparent compression 
+- Hardware-accelerated native encryption
+- Efficient storage with snapshots and copy-on-write clones
+- Efficient local or remote replication
 
+But let us have a look at some of them in more Detail:
 
 
 _This Blogpost only serves as an Introduction to ZFS, for deeper coverage refer to the sources linked below._
