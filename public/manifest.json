@@ -3,12 +3,24 @@
   "name": "JeuJeus Blog",
   "icons": [
     {
-      "src": "/img/jeujeus_192.jpeg",
+      "src": "/img/jeujeus_48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },{
+      "src": "/img/jeujeus_96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },{
+      "src": "/img/jeujeus_128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },{
+      "src": "/img/jeujeus_192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/img/jeujeus_512.jpeg",
+      "src": "/img/jeujeus_512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -35,6 +35,8 @@
 		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
+        {#- PWA #}
+        <link rel="manifest" href="/manifest.json">
 		<script>
           if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("/service-worker.js");
