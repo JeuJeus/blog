@@ -73,7 +73,7 @@ body {
 
 footer {
     flex-shrink: 0;
-    margin-bottom: 1em;
+    padding: 1rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -171,7 +171,6 @@ header {
 	display: flex;
 	gap: 1em .5em;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	align-items: center;
 	padding: 1em;
 }
@@ -185,10 +184,12 @@ header {
 }
 
 /* Nav */
+header > nav {
+	margin-left: auto!important;
+}
 .nav {
 	display: flex;
 	padding: 0;
-	margin: 0;
 	list-style: none;
 }
 .nav-item {
