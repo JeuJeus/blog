@@ -47,7 +47,7 @@ ZFS was developed with the following Key Points in Mind [2]:
 
 The key points of the vast array of features in ZFS will be discussed in the next section.
 I will focus on what I consider to be the most important ones and keep the description relatively high level.
-If applicable, I will provide real-world examples that have been useful for my purposes.
+My favourite section is undoubtedly <a href="#zfs-send">ZFS send</a> - prepare to have your mind bent.
 
 ### Caching
 ZFS employs both write and read caching.
@@ -79,8 +79,22 @@ However, this feature comes at a cost, as it requires CPU resources to compress 
 As a result, it may not be suitable for all use cases. [9]
 
 ### Native Encryption
+To explain native encryption, I must first introduce the concept of datasets.
+ZFS uses pools as described above, while the actual data (FS, snapshots, etc.) is stored in datasets, which are themselves stored in pools[10].  
+In contrast to classical full disk encryption, ZFS allows encryption on a per dataset basis, which makes it possible to mix encrypted and unencrypted datasets in a single pool.
+This also allows booting from an unencrypted dataset and unlocking the encrypted dataset after the boot process (e.g. via SSH in the case of a server).
+Additionally, ZFS Encryption implementation enables carrying out maintenance operations, such as integrity checks, scrubbing, and resilvering, while the dataset remains locked.
+This is particularly useful when we look at ZFS send in the next chapter.
+However, this implementation exposes the file's metadata, including the dataset's name, size, usage, and properties.
+Apart from that, ZFS Encryption relies on standard encryption methods such as AES-256, and can be unlocked with a passphrase.
 
 ### ZFS send
+This function at first blew me away because it is so powerful and yet so ingenious.
+ZFS enables you to send Snapshots of Datasets over the Internet.
+This means you can send a full snapshot of your encrypted dataset to another machine across the internet.
+Once you accept the Snapshot via ZFS receive, it will be attached to a  pool specified.[12]
+The truly remarkable aspect is the remote machine's ability to verify data integrity, repair the dataset, and receive successive incremental snapshots while keeping the dataset encrypted and locked.[2] 
+This, in turn, enables transferring your machine's backup to an untrusted third party.
 
 ### Integrity Check & Repair
 
@@ -95,6 +109,8 @@ Due to the restrictive licensing, it is unlikely that ZFS will be included in yo
 Manual configuration of the Installation Image is probably required for a ZFS root based System.
 If you really want to use Windows or macOS there is definitely no hope for you - and no ZFS. [2]
 
+This article has grown much larger than I originally anticipated, but I'm happy to share the mystical world of ZFS with you.
+
 ---
 <a href="https://wiki.gentoo.org/wiki/ZFS" target="_blank">[1] - OpenZFS Gentoo Wiki</a>  
 <a href="https://openzfs.org/" target="_blank">[2] - OpenZFS Wiki</a>  
@@ -105,3 +121,6 @@ If you really want to use Windows or macOS there is definitely no hope for you -
 <a href="https://www.open-e.com/blog/copy-on-write-snapshots/" target="_blank">[7] - ZFS Copy-on-write & Snapshots open-e</a>
 <a href="https://www.truenas.com/docs/references/zfsdeduplication" target="_blank">[8] - ZFS Deduplication TrueNAS</a>
 <a href="https://www.unixtutorial.org/zfs-basics-enable-or-disable-compression" target="_blank">[9] - ZFS basics: enable or disable compression UnixTutorial</a>
+<a href="https://de.wikibooks.org/wiki/ZFS_auf_Linux/_Dataset" target="_blank">[10] - ZFS auf Linux/ Dataset DE Wikibooks</a>
+<a href="https://klarasystems.com/articles/openzfs-native-encryption/" target="_blank">[11] - OpenZFS Native Encryption klara inc.</a>
+<a href="https://unix.stackexchange.com/questions/680235/zfs-send-recv-full-snapshot" target="_blank">[12] - ZFS send/recv full snapshot - Unix Stackexchange</a>
