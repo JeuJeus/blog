@@ -179,8 +179,8 @@ code {
 /* Header */
 header {
     display: flex;
+    flex-wrap: nowrap;
     gap: 1em .5em;
-    flex-wrap: wrap;
     align-items: center;
     padding: 1em;
 }
@@ -202,6 +202,7 @@ header > nav {
 
 .nav {
     display: flex;
+    align-items: center;
     padding: 0;
     list-style: none;
 }
@@ -329,7 +330,7 @@ img {
 }
 
 .jeujeus-logo {
-    height: 50px;
+    max-height: 50px;
 }
 
 /*search*/
