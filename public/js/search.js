@@ -2,18 +2,26 @@ const includesSearchString = (postMeta, searchString) => postMeta.toLowerCase().
 
 const postIncludesSearchString = (post, searchString) => includesSearchString(post.title, searchString) || includesSearchString(post.description, searchString) || includesSearchString(post.tags.toLowerCase(), searchString);
 
+const htmlDecode = input => {
+    const doc = new DOMParser().parseFromString(input, "text/html");
+    return doc.documentElement.textContent;
+};
 const createPostResultEntry = post => {
+    const resultElement = document.createElement('div');
+
+    const resultHeading = document.createElement('h2');
     const resultLink = document.createElement('a');
     resultLink.href = post.url;
-    const resultLinkHeader = document.createElement('h2');
-    resultLinkHeader.innerText = post.title;
+    resultLink.innerText = htmlDecode(post.title);
+    resultHeading.appendChild(resultLink);
+
     const resultLinkParagraph = document.createElement('p');
-    resultLinkParagraph.innerText = post.description;
+    resultLinkParagraph.innerText = htmlDecode(post.description);
 
-    resultLink.appendChild(resultLinkHeader);
-    resultLink.appendChild(resultLinkParagraph);
+    resultElement.appendChild(resultHeading);
+    resultElement.appendChild(resultLinkParagraph);
 
-    return resultLink;
+    return resultElement;
 }
 
 function triggerSearch(posts, searchString, resultsDom) {
