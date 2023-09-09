@@ -339,6 +339,8 @@ img {
     background: var(--background-color);
     border: 1px dashed var(--text-color);
     margin: 1em 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
 }
 
 #results>div {
