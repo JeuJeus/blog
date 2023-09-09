@@ -1,0 +1,17 @@
+---
+permalink: "/search.json"
+---
+[
+  {%- for post in collections.posts | reverse %}
+    {%- set url %}{{ post.url | url }}{% endset -%}
+    {
+      "url": "{{ url }}",
+      "title": "{{ post.data.title }}",
+      "description": "{{ post.data.description }}",
+      "tags": "{{ post.data.tags }}"
+    }
+    {%- if not loop.last -%}
+    ,
+    {%- endif -%}
+  {%- endfor %}
+]
