@@ -97,8 +97,22 @@ The truly remarkable aspect is the remote machine's ability to verify data integ
 This, in turn, enables transferring your machine's backup to an untrusted third party.
 
 ### Integrity Check & Repair
+ZFS is a file system known for prioritising data integrity protection.
+It protects against various sources of data corruption, such as power problems, disk errors and more.
+ZFS uses checksums and a Merkle tree structure to validate data at multiple levels in the file system hierarchy.
+When data is accessed, its checksum is compared to the expected value, and if they don't match, ZFS can recover the data from redundant copies, if available.
+Consistency of data held in memory, such as cached data in the ARC, is not checked by default because ZFS expects ECC.[2]
 
 ### Pooling and Raid Management
+As mentioned above, in addition to being a FS, ZFS is also a volume manager.
+ZFS implements volume management using pools.
+ZFS pools are storage configurations that group physical drives (such as hard disks or SSDs) into a single unit for efficient data management.
+They use a technology called RAID-Z to provide data redundancy and protection against drive failures.
+Raid-Z is ZFS's own raid format based on the concepts of Raid 5.[2]
+One of the key benefits of ZFS pooling is that the partitioning and formatting of the storage is completely handled by ZFS once the pool and raid configuration have been defined.
+This allows the user to add new drives to the pool while it is running and being used.  
+
+In addition to the mentioned features, ZFS also supports various others, such as Unix-permission based native SMB shares for Datasets.
 
 ## Things to keep in Mind - Counterarguments
 Since ZFS relies on RAM for caching files and metadata and during parity checking, bit flips would be disastrous.
@@ -114,13 +128,13 @@ This article has grown much larger than I originally anticipated, but I'm happy 
 ---
 <a href="https://wiki.gentoo.org/wiki/ZFS" target="_blank">[1] - OpenZFS Gentoo Wiki</a>  
 <a href="https://openzfs.org/" target="_blank">[2] - OpenZFS Wiki</a>  
-<a href="https://github.com/openzfs/zfs" target="_blank">[3] - OpenZFS Github</a>
-<a href="https://en.wikipedia.org/wiki/Common_Development_and_Distribution_License" target="_blank">[4] - Common Development and Distribution License Wikipedia</a>
-<a href="https://www.fujitsu.com/global/products/computing/servers/unix/sparc-enterprise/software/solaris10/zfs/" target="_blank">[5] - Solaris ZFS of Solaris™ 10 Operating System function Fujitsu</a>
-<a href="https://www.45drives.com/community/articles/zfs-caching/" target="_blank">[6] - ZFS Caching 45 Drives</a>
-<a href="https://www.open-e.com/blog/copy-on-write-snapshots/" target="_blank">[7] - ZFS Copy-on-write & Snapshots open-e</a>
-<a href="https://www.truenas.com/docs/references/zfsdeduplication" target="_blank">[8] - ZFS Deduplication TrueNAS</a>
-<a href="https://www.unixtutorial.org/zfs-basics-enable-or-disable-compression" target="_blank">[9] - ZFS basics: enable or disable compression UnixTutorial</a>
-<a href="https://de.wikibooks.org/wiki/ZFS_auf_Linux/_Dataset" target="_blank">[10] - ZFS auf Linux/ Dataset DE Wikibooks</a>
-<a href="https://klarasystems.com/articles/openzfs-native-encryption/" target="_blank">[11] - OpenZFS Native Encryption klara inc.</a>
-<a href="https://unix.stackexchange.com/questions/680235/zfs-send-recv-full-snapshot" target="_blank">[12] - ZFS send/recv full snapshot - Unix Stackexchange</a>
+<a href="https://github.com/openzfs/zfs" target="_blank">[3] - OpenZFS Github</a>  
+<a href="https://en.wikipedia.org/wiki/Common_Development_and_Distribution_License" target="_blank">[4] - Common Development and Distribution License Wikipedia</a>  
+<a href="https://www.fujitsu.com/global/products/computing/servers/unix/sparc-enterprise/software/solaris10/zfs/" target="_blank">[5] - Solaris ZFS of Solaris™ 10 Operating System function Fujitsu</a>  
+<a href="https://www.45drives.com/community/articles/zfs-caching/" target="_blank">[6] - ZFS Caching 45 Drives</a>  
+<a href="https://www.open-e.com/blog/copy-on-write-snapshots/" target="_blank">[7] - ZFS Copy-on-write & Snapshots open-e</a>  
+<a href="https://www.truenas.com/docs/references/zfsdeduplication" target="_blank">[8] - ZFS Deduplication TrueNAS</a>  
+<a href="https://www.unixtutorial.org/zfs-basics-enable-or-disable-compression" target="_blank">[9] - ZFS basics: enable or disable compression UnixTutorial</a>  
+<a href="https://de.wikibooks.org/wiki/ZFS_auf_Linux/_Dataset" target="_blank">[10] - ZFS auf Linux/ Dataset DE Wikibooks</a>  
+<a href="https://klarasystems.com/articles/openzfs-native-encryption/" target="_blank">[11] - OpenZFS Native Encryption klara inc.</a>  
+<a href="https://unix.stackexchange.com/questions/680235/zfs-send-recv-full-snapshot" target="_blank">[12] - ZFS send/recv full snapshot - Unix Stackexchange</a>  
