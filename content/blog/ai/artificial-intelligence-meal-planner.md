@@ -3,7 +3,7 @@ title: Artificial "Intelligence" Meal-Bot
 description:  Trusting in an artificial "intelligence" and using its instructions unchecked as food - what could go wrong?
 date: 2023-08-18
 tags:
-  - ai
+  - AI
   - stuff
   - new zealand
 ---
