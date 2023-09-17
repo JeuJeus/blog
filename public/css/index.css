@@ -244,6 +244,16 @@ header > nav {
     margin-left: -1.5rem;
 }
 
+.postlist-meta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .postlist-date,
 .postlist-item:before {
     font-size: 0.8125em; /* 13px /16 */
@@ -267,6 +277,16 @@ header > nav {
 
 .postlist-item-active .postlist-link {
     font-weight: bold;
+}
+
+.postlist-tags {
+    margin-left: 0.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
 }
 
 /* Tags */
@@ -344,10 +364,10 @@ img {
     color: var(--text-color);
 }
 
-#results>div {
+#results > div {
     margin-top: 1em;
 }
 
-#results>div:first-of-type {
+#results > div:first-of-type {
     margin-top: 0 !important;
 }
