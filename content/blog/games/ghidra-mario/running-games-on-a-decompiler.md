@@ -31,6 +31,7 @@ But the fact that Ghidra is used to play the "TAS" (used very loosely here) make
 This screenshot shows Super Mario Bros for the NES running on Ghidra.
 He even recorded a TAS for it, using keyboard input events to complete the first level.
 Based on the rather slow emulation speed, the level can be completed in 316 but 32 minutes of real time[1].
+
 ---
 <a href="https://github.com/nevesnunes/ghidra-plays-mario" target="_blank">[1] -  Ghidra plays Mario,Github nevesnunes</a>    
 <a href="https://github.com/NationalSecurityAgency/ghidra" target="_blank">[2] -  Ghidra,Github NSA</a>    
