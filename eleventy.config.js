@@ -93,8 +93,6 @@ module.exports = eleventyConfig => {
     });
 
     eleventyConfig.addPlugin(pluginPWA, {
-        swDest: "./build/service-worker.js",
-        globDirectory: "./build",
         cacheId: "jeujeus-blog",
         runtimeCaching: [
             {
