@@ -105,7 +105,7 @@ module.exports = eleventyConfig => {
             },
             {
                 urlPattern:
-                    /^.*\.(jpg|png|mp4|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
+                    /^.*\.(avif|jpg|png|mp4|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
                 handler: "StaleWhileRevalidate",
             },
         ]
