@@ -38,9 +38,22 @@
         {#- PWA #}
         <link rel="manifest" href="/manifest.json">
 		<script>
-          if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("/service-worker.js");
-          }
+            const serviceWorkerStateChange = newWorker => {
+                if (newWorker.state !== "installed") return;
+                if (navigator.serviceWorker.controller) window.location.reload();
+            };
+
+            const handleServiceWorkerRegistrationUpdate = registration => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener("statechange", newWorker => serviceWorkerStateChange(newWorker));
+            };
+
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker
+                    .register("/service-worker.js")
+                    .then((registration) => registration.addEventListener("updatefound", registration => handleServiceWorkerRegistrationUpdate(registration)))
+                    .catch((error) => console.error("Service Worker registration failed:", error));
+            }
         </script>
 	</head>
 	<body>
