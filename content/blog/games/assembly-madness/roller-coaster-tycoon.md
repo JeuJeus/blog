@@ -28,7 +28,7 @@ Compared to a higher level language like the contemporary alternative of writing
 Let us compare the classic Hello World in x86 Assembly with its counterpart in C.
 
 **x86 Assembly** (keep in Mind this is for illustration purposes only)
-{% highlight "assembly" %}
+{% highlight "wasm" %}
 ; hello-DOS.asm - single-segment, 16-bit "hello world" program
 org  0x100        ; .com files always start 256 bytes into the segment
 
@@ -43,7 +43,7 @@ msg  db 'Hello, World!', 0x0d, 0x0a, '$'   ; $-terminated message
 {% endhighlight %}[3]
 
 **C**
-{% highlight "C" %}
+{% highlight "c" %}
 #include<stdio.h>
 
 int main() {

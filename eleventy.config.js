@@ -17,7 +17,7 @@ module.exports = eleventyConfig => {
     // For example, `./public/css/` ends up in `_site/css/`
     eleventyConfig.addPassthroughCopy({
         "./public/": "/",
-        "./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
+        "./node_modules/prism-themes/themes/prism-one-dark.css": "/css/prism-one-dark.css"
     });
 
     // Run Eleventy when these files change:

@@ -33,7 +33,7 @@ During that time, optimizing games heavily was the only way to ensure they ran a
 Now that the expectations have been set, let's examine the code and explore what enabled the shader calculations for Quake.
 
 Excerpt from Quake III Arenas original Code:
-{% highlight "C" %}
+{% highlight "c" %}
 float Q_rsqrt( float number )
 {
 long i;

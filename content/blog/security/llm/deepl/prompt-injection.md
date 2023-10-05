@@ -64,7 +64,7 @@ Rushed development to be the first and attract as many users as possible indicat
 This sounds like a promising opportunity to explore an example of a hastily executed and potentially problematic implementation.  
 Let us examine the code example for the OpenAI npm Module [4]:
 
-{% highlight "JS" %}
+{% highlight "js" %}
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
@@ -88,7 +88,7 @@ For simplicity's sake, let's assume that its usecase is to convert all text to u
 At present, the output expected from the given example is "this is a test".
 Thus, the code must be expanded to achieve the application's intended purpose.
 
-{% highlight "JS" %}
+{% highlight "js" %}
 [...]
 const userInput = "this is a test";
 const task = 'Convert the following string in the brackets to all Uppercase <<'+userInput+'>>'

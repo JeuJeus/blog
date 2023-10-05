@@ -16,12 +16,12 @@
     --color-gray-50: #C0C0C0;
     --color-gray-90: #333;
 
-    --background-color: #fff;
+    --background-color: #FCFCFC;
 
     --text-color: var(--color-gray-90);
     --text-color-link: #082840;
-    --text-color-link-active: #5f2b48;
-    --text-color-link-visited: #17050F;
+    --text-color-link-active: #2B4C66;
+    --text-color-link-visited: #5f2b48;
 
     --syntax-tab-size: 2;
 }

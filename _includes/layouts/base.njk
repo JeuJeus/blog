@@ -28,7 +28,7 @@
 		{#- Add the contents of a file to the bundle #}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
 		{#- Or add from node_modules #}
-		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
+		{# {%- css %}{% include "node_modules/prism-themes/themes/prism-one-dark.css" %}{% endcss %} #}
 
 		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
 		<style>{% getBundle "css" %}</style>
@@ -38,22 +38,27 @@
         {#- PWA #}
         <link rel="manifest" href="/manifest.json">
 		<script>
-            const serviceWorkerStateChange = newWorker => {
-                if (newWorker.state !== "installed") return;
-                if (navigator.serviceWorker.controller) window.location.reload();
-            };
+           const serviceWorkerStateChange = newWorker => {
+               if (newWorker.state !== "installed") return;
+               if (navigator.serviceWorker.controller) window.location.reload();
+           };
 
-            const handleServiceWorkerRegistrationUpdate = registration => {
-                const newWorker = registration.installing;
-                newWorker.addEventListener("statechange", newWorker => serviceWorkerStateChange(newWorker));
-            };
+           const handleServiceWorkerRegistrationUpdate = registration => {
+               const newWorker = registration.installing;
+               if(!newWorker) return;
+               newWorker.addEventListener("statechange", newWorker => serviceWorkerStateChange(newWorker));
+           };
 
-            if ("serviceWorker" in navigator) {
-                navigator.serviceWorker
-                    .register("/service-worker.js")
-                    .then((registration) => registration.addEventListener("updatefound", registration => handleServiceWorkerRegistrationUpdate(registration)))
-                    .catch((error) => console.error("Service Worker registration failed:", error));
-            }
+           const handleServiceWorkerRegistration = registration => {
+               registration.addEventListener("updatefound", registration => handleServiceWorkerRegistrationUpdate(registration));
+           };
+
+           if ("serviceWorker" in navigator) {
+               navigator.serviceWorker
+                   .register("/service-worker.js")
+                   .then((registration) => handleServiceWorkerRegistration(registration))
+                   .catch((error) => console.error("Service Worker registration failed:", error));
+           }
         </script>
 	</head>
 	<body>
