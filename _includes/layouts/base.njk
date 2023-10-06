@@ -85,14 +85,21 @@
 		</main>
 
 		<footer>
-		    <a href="https://jeujeus.de" target="_blank">Website</a>
-
-            {%- for entry in collections.all | eleventyNavigation %}
-                {% if entry.key == "Imprint" or entry.key == "About Me" %}
-                    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-                {% endif %}
-            {%- endfor %}
-            </ul>
+            <div>
+                <a href="/" class="home-link"><img class="jeujeus-logo" src="/img/logo.webp" height="50" alt="JeuJeus Logo" /></a>
+                <b>blog.jeujeus.de</b>
+            </div>
+            <div>
+                <li class="nav-item"><a href="https://jeujeus.de" target="_blank">Website</a></li>
+                <li class="nav-item"><a href="/about">About Me</a></li>
+                <li class="nav-item"><a href="/imprint">Imprint</a></li>
+            </div>
+            <div>
+                <li class="nav-item"><a href="https://github.com/JeuJeus" rel="noreferrer" target="_blank">GitHub</a></li>
+                <li class="nav-item"><a href="https://linkedin.com/in/juliusfigge" rel="noreferrer" target="_blank">LinkedIn</a></li>
+                <li class="nav-item"><a href="https://soundcloud.com/jeujeus" rel="noreferrer" target="_blank">SoundCloud</a></li>
+                <li class="nav-item"><a href="https://youtube.com/@JeuJeus" rel="noreferrer" target="_blank">YouTube</a></li>
+            </div>
 		</footer>
 	</body>
 </html>

@@ -75,10 +75,46 @@ body {
 
 footer {
     flex-shrink: 0;
-    padding: 1rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@media (max-width: 576px) {
+
+    footer {
+        padding-top: 1em;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+    }
+
+    footer > div {
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer > div:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -344,10 +380,10 @@ img {
     color: var(--text-color);
 }
 
-#results>div {
+#results > div {
     margin-top: 1em;
 }
 
-#results>div:first-of-type {
+#results > div:first-of-type {
     margin-top: 0 !important;
 }
