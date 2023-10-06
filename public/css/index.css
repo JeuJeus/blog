@@ -96,20 +96,30 @@ footer > div {
 
     footer {
         padding-top: 1em;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+    }
+
+    footer > div:first-child {
+        flex-basis: 100%;
+        padding-left: 0;
+        justify-content: center;
         align-content: center;
         align-items: center;
     }
 
     footer > div {
+        flex-basis: 50%;
         margin-bottom: 1em;
+        padding-left: 2em;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: baseline;
     }
 
     footer > div:last-child {
