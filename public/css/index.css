@@ -398,3 +398,8 @@ img {
 #results > div:first-of-type {
     margin-top: 0 !important;
 }
+
+/*tables*/
+.table-overflow-wrapper {
+    overflow-x: auto;
+}

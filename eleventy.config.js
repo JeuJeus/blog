@@ -67,6 +67,19 @@ module.exports = eleventyConfig => {
 
     // Customize Markdown library settings:
     eleventyConfig.amendLibrary("md", mdLib => {
+        const fence = mdLib.renderer.rules.fence;
+
+        const rules = {
+            fence: (tokens, idx, options, env, slf) => {
+                const fenced = fence(tokens, idx, options, env, slf);
+                return `<web-copy-code>${fenced}</web-copy-code>`;
+            },
+            table_close: () => '</table>\n</div>',
+            table_open: () => '<div class="table-overflow-wrapper">\n<table>\n',
+        }
+
+        mdLib.renderer.rules = {...mdLib.renderer.rules, ...rules};
+
         mdLib.use(markdownItAnchor, {
             permalink: markdownItAnchor.permalink.ariaHidden({
                 placement: "after",
