@@ -1,5 +1,5 @@
 ---
-title: Weird Quirks of Java - E01 - Historic Reasons in Language Design 
+title: Weird Quirks of Java - E01- Historic Reasons in Language Design 
 description: The Language Design of Java is heavily based on C, therefore some weird quirks were directly ported and are still present within the Language today, whilst primarily remaining unknown or unrevealed.
 date: 2023-20-23
 tags:
@@ -7,10 +7,10 @@ tags:
   - jvm
   - c
   - quirks
+  - octals
+  - linux
   - 'language design'
-  - Octals
-  - 'Unix File Permissions'
-  - 'Linux'
+  - 'unix file permissions'
 ---
 
 In this brief episode, I want to give you a puzzle that is simple in itself, but also not very obvious.
@@ -31,7 +31,7 @@ public class Magic {
 <details>
 <summary><i>Solution and Explanation</i></summary>
 
-The Solution is <code>19</code> - Congrats if you have guessed that correctly. But Why?  
+The Solution is _19_ - Congrats if you have guessed that correctly. But Why?  
 
 The design and syntax of the Java language is based on and influenced by the C programming language[1].
 This design choice brings the implicit formatting and parsing of numbers in integer literals from C[2] to Java.
@@ -39,12 +39,19 @@ This means that any number starting with 0 is treated as octal.
 The same is true for hexadecimal with a leading 0x.[3]  
 
 But what use is there for this?  
-Amongst others, this is heavily used in POSIX / Unix / Linux till today - which are mostly implemented in C.
-Linux utilizes Operation Permission Codes e.g. for File Permissions by using Octal based notation.[4]
+This is still widely used in POSIX / Unix / Linux, which are mostly implemented in C.
+Linux uses operation permission codes, e.g. for file permissions, by using octal-based coding notation[4].
 
 {% highlight "bash" %}
 drwxr-x--- 2 jeujeus jeujeus 2048 Oct 23 2023  blog
 {% endhighlight %}
+The following example above corresponds to the umask of _750_ :
+
+| Octal Representation | Who Part | Permission Bits | Character Flags |
+|----------------------|----------|-----------------|-----------------|
+| 7                    | O        | 111             | rwx             |
+| 5                    | G        | 101             | r-x             |
+| 0                    | U        | 000             | ---             |
 
 You can read more regarding Unix File Permissions at [5].
 </details>
