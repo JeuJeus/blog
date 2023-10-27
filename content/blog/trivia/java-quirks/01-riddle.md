@@ -1,7 +1,7 @@
 ---
 title: Weird Quirks of Java - E01- Historic Reasons in Language Design 
 description: The Language Design of Java is heavily based on C, therefore some weird quirks were directly ported and are still present within the Language today, whilst primarily remaining unknown or unrevealed.
-date: 2023-20-23
+date: 2023-10-23
 tags:
   - java
   - jvm
