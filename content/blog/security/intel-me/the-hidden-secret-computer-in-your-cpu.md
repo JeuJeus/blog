@@ -91,6 +91,7 @@ Therefore, let us imagine that Intel's intentions are purely for our benefit, an
 Any CPU without the latest firmware updates, vulnerable to possible exploitation, poses a significant security risk.
 As CPUs reach EOL at some point in time this can and will happen.
 As a result, it would be beneficial if Intel were to grant us the ability to mitigate these issues by disabling this super privileged entry point for hackers.
+
 ---
 ### Sources
 <a href="https://www.youtube.com/watch?v=iffTJ1vPCSo" target="_blank">[1] - Replace Your Exploit-Ridden Firmware with Linux - Ronald Minnich, Google</a>  
