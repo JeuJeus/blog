@@ -4,7 +4,7 @@ description: Microsoft AI researchers aimed to share a model featured in a paper
 date: 2023-09-19
 tags:
   - security
-  - Microsoft
+  - microsoft
   - Sensitive Information Disclosure
   - Storage Bucket
   - SAS Token
