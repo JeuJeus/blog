@@ -45,6 +45,10 @@
 
         --background-color: #161618;
     }
+
+    .invert-in-darkmode > picture > img{
+        filter: invert(1);
+    }
 }
 
 
