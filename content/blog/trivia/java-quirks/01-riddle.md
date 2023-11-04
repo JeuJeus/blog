@@ -11,6 +11,7 @@ tags:
   - linux
   - 'language design'
   - 'unix file permissions'
+  - 'weird quirks of java'
 ---
 
 In this brief episode, I want to give you a puzzle that is simple in itself, but also not very obvious.

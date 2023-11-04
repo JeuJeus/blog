@@ -11,6 +11,7 @@ tags:
   - label
   - 'conditional breaks'
   - 'language design'
+  - 'weird quirks of java'
 ---
 
 This episode briefly explores the history and current status of goto statements in Java.

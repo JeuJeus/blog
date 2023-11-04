@@ -1,0 +1,30 @@
+<h1>Series<h1>
+
+<h2>Weird Quirks of Java</h2>
+
+{% set javaPosts = collections.posts | javaSeriesPosts %}
+{%- css %}.postlist-series-java { counter-reset: start-from {{ (javaPosts.length) + 1 }} }{% endcss %}
+
+<ol reversed class="postlist postlist-series-java">
+{% for post in javaPosts | reverse %}
+	<li class="postlist-item">
+		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd.MM.yyyy") }}</time>
+	</li>
+{% endfor %}
+</ol>
+
+
+<h2>Selfhosting and your Homeserver</h2>
+
+{% set homeserverPosts = collections.posts | homeserverSeriesPosts %}
+{%- css %}.postlist-series-homeserver { counter-reset: start-from {{ (homeserverPosts.length) + 1 }} }{% endcss %}
+
+<ol reversed class="postlist postlist-series-homeserver">
+{% for post in homeserverPosts | reverse %}
+	<li class="postlist-item">
+		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd.MM.yyyy") }}</time>
+	</li>
+{% endfor %}
+</ol>
