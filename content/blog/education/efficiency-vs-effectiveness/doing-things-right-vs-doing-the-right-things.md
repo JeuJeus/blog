@@ -28,7 +28,7 @@ than manually renaming a variable within a file or across a project, to ensure s
 Thus, performing tasks correctly and efficiently enables one to work more quickly and with less labour or resources for a given task, as opposed to doing it incorrectly.
 
 ## Doing the right thing
-In contrast to the previous phrase, this one describes efficiency.
+In contrast to the previous phrase, this one describes effectiveness.
 For example, a large ice cream shop using hundreds of liters of whipped cream per day may find it more effective to buy ready-made whipped cream instead of making it from scratch.
 A practical example in programming would involve utilizing established, easily accessible open-source solutions such as OWASP for security, and citing them as sources in code documentation, rather than struggling to find freely available academic papers.
 
