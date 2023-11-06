@@ -72,7 +72,7 @@ It does not matter how fast you can type `System.out.prinln()` if using the debu
 
 ---
 ## Sources
-<a href="https://debmillswriter.com/wp-content/uploads/2015/10/Blog-Effectiveness-vs.-Efficiency.png" target="_blank">[1] - debmillswriter</a>
+<a href="https://debmillswriter.com/wp-content/uploads/2015/10/Blog-Effectiveness-vs.-Efficiency.png" target="_blank">[1] - debmillswriter</a>  
 <a href="https://twitter.com/elbruno/status/1396176506334941186?lang=zh-Hant" target="_blank">[2] - @elbruno, Twitter</a>
 
 
