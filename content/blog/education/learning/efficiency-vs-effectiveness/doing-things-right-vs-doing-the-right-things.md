@@ -1,5 +1,5 @@
 ---
-title: Doing Things Right versus doing the Right Things - Keep on Improving
+title: Learning - E02 - Doing Things Right versus doing the Right Things
 description: Whilst it intuitively seems rather logically to prioritize on doing things right, it is indeed as relevant to do the right things.
 date: 2023-11-06
 tags:

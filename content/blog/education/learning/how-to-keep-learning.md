@@ -1,5 +1,5 @@
 ---
-title: How to keep learning forever and why self-improvement is important
+title: Learning - E01 - How to keep learning forever and why self-improvement is important
 description: After completing your studies, it can be challenging to continue learning while working. However, there are techniques to sustain a mindset of ongoing learning and improvement. This is the method I have adopted.
 date: 2023-08-29
 tags:
