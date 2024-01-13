@@ -65,9 +65,12 @@ module.exports = eleventyConfig => {
 
     eleventyConfig.addFilter("filterTagList", tags => (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1));
 
-    eleventyConfig.addFilter("javaSeriesPosts", collection => collection.filter(post => (post.data.tags || []).some(tag => tag.toLowerCase() === "weird quirks of java")));
-    eleventyConfig.addFilter("learningSeriesPosts", collection => collection.filter(post => (post.data.tags || []).some(tag => tag.toLowerCase() === "learning")));
-    eleventyConfig.addFilter("homeserverSeriesPosts", collection => collection.filter(post => (post.data.tags || []).some(tag => tag.toLowerCase() === "selfhosting and your homeserver")));
+    const filterPosts = filterTag => collection => collection.filter(post => (post.data.tags || []).some(tag => tag.toLowerCase() === filterTag));
+
+    eleventyConfig.addFilter("javaSeriesPosts", filterPosts("weird quirks of java"));
+    eleventyConfig.addFilter("learningSeriesPosts", filterPosts("learning"));
+    eleventyConfig.addFilter("homeserverSeriesPosts", filterPosts("selfhosting and your homeserver"));
+    eleventyConfig.addFilter("trustProblemsSeriesPosts", filterPosts("trust problems"));
 
     // Customize Markdown library settings:
     eleventyConfig.amendLibrary("md", mdLib => {
