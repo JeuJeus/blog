@@ -1,0 +1,101 @@
+---
+title: Trust Problems - E01 - Why compiling binaries from clean Source can contain Malware
+description: There could be Malware hidden in our daily used programs we would be unable to detect. This article covers a thought experiment that sticks around since decades.
+date: 2024-01-13
+tags:
+  - code
+  - trojan
+  - security
+  - compiler
+  - 'thought experiment'
+  - 'trust problems'
+---
+_I would like to start another series with this article. An insight into the world of trust issues that arise from a cyber-security perspective in our digital world.
+In this first episode, we look at a wonderful thought experiment from the 80s._
+
+## Thompsons Thought Experiment
+
+The general idea [1] is quite simple and stems from Ken Thompson - best known for his work in creating UNIX at Bell Labs.
+It is based on the idea that in Languages like C, the Compiler is written in the same Language (C) too.
+Therefore, a Compiler is compiled by another Compiler.
+The classic "Chicken and Egg"-Problem.  
+
+Let us imagine, that normally the compile function looks something like the following:
+
+{% highlight "c" %}
+compile(s)
+char *s;
+{
+    ...
+}
+{% endhighlight %}[1]
+
+Now we introduce a Trojan Horse into the compiler by matching for patterns in the source to be compiled.
+Everytime a specific pattern is matched, a Bug is introduced into the binary being created:
+
+{% highlight "c" %}
+compile(s)
+char *s;
+{
+    if(match(s, "pattern-unix-login")) {
+        compile("login-backdoor");
+        return;
+    }
+    ...
+}
+{% endhighlight %}[1]
+
+Are there any interesting patterns to match?
+Thompson imagined, that it would be rather interesting to match the UNIX "login" commands code.  
+Therefore one could implement a backdoor into the login functionality not only permitting the correct user passwords, but rather a hidden master-passphrase too.
+This would allow an attacker to log into any UNIX system using this binary as any user.  
+
+But you may be pointing out at this time - that this modification to the compiler would not go undetected.
+Which is absolutely correct and the exact point where the real elegance of this compiler trojan comes into play:
+
+{% highlight "c" %}
+compile(s)
+char *s;
+{
+    if(match(s, "pattern-unix-login")) {
+        compile("login-backdoor");
+        return;
+    }
+    if(match(s, "pattern-c-compiler")) {
+        compile("insert-both-trojan-horses");
+        return;
+    }
+    ...
+}
+{% endhighlight %}[1]
+
+The magic lies in inserting both trojan horses into the compiler, when it is compiling a compiler.
+Initially a clean C compiler is used to compile the modified Source, resulting in a binary containing the trojan horse.
+This compiler is set into place as the official C compiler, and the poisoned Source is removed.
+Still the compiler will always add both trojan horses (the UNIX login backdoor and the compiler Backdoor) into any binaries built with it.
+But any trace of the attack in the source code is hidden and removed.
+
+{% image "./compiler-trojan-overview.png", "Overview of the Attack [3]" %}[3]
+
+## Takeaway
+
+Since, as we stated at the beginning any C-Compiler and therefore any Binary is compiled with a Compiler built from C itself, we need to trust the binaries we are using.
+But Thompsons thought experiment clearly points out a gaping hole in this chain of trust.  
+Not only have many people speculated about Thompson actually having done this himself.
+But rather that Nation State Actors would do everything for a trojan like this.
+
+Fortunately, it's not that simple after all.
+It is possible to decompile and analyse any binary.
+This is where such modifications would be noticed at the latest.  
+
+We finally enter the realm of conspiracy theories as soon as we go one step further and assume that our poisoned Trojan makes modifications to a decompiler.
+These would prevent the decompiler from detecting our Trojan and hide it instead.
+But that goes too far.
+
+You find it hard to believe that something like this may occur in real life?
+Have a look at <a href="https://www.quora.com/What-is-a-coders-worst-nightmare/answer/Mick-Stute" target="_blank">this article [2]</a>.
+
+---
+<a href="https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf" target="_blank">[1] - Reflections on Trusting Trust, Ken Thompson</a>  
+<a href="https://www.quora.com/What-is-a-coders-worst-nightmare/answer/Mick-Stute" target="_blank">[2] - What is a coder's worst nightmare?, Mick Stute</a>  
+<a href="http://www.goodmath.org/blog/2007/04/15/strange-loops-ken-thompson-and-the-self-referencing-c-compiler/" target="_blank">[3] - Strange Loops: Ken Thompson and the Self-referencing C Compiler, Good Math/Bad Math</a>  
