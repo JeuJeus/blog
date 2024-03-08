@@ -48,12 +48,12 @@ Today we will look at this aspect in the context of Apple as an example.
 
 Apple is known to widely restrict the Users ability to interface with their devices.
 Amongst the restriction of access to the file system, NFC API Acess (concerning third party payment providers other than
-Apple Pay), the ability to turn of WiFI/Bluetooth via Control Center.
+Apple Pay), the ability to turn off WiFI/Bluetooth via Control Center.
 Those have been mostly controversial but argumentatively comprehensible decisions.
 Apple hase used a similar strategy to justify the restriction on sideloading apps or installing third-party App Stores.
 In its press statement, Apple uses the narrative that the EU's legal requirement represents an attack on the security
 and privacy of its users.
-This article intentionally uses framing to frame the public perception of Apple's Walled Garden in the direction of a
+This article intentionally uses framing to direct the public perception of Apple's Walled Garden in the direction of a
 safe and secure environment, which is of course only positive for the user.
 At the same time, the newly installed EU legal regulations pose a threat...[3]
 
@@ -68,12 +68,12 @@ privacy' 10 times and 'safety' 4 times.
 
 I would like to clarify this statement with another quote:
 
-> The guiding principle of the App Store is simple—we want to provide **a safe experience for users to get apps** and a
+> The guiding principle of the App Store is simple — we want to provide **a safe experience for users to get apps** and a
 > great opportunity for all developers to be successful.
 > We do this by offering a **highly curated App Store where every app is reviewed by experts** and an editorial team
 > helps users discover new apps every day.
 > We also **scan each app for malware and other software that may impact user safety, security, and privacy**.
-> These efforts have made **Apple’s platforms the safest** for consumers around the world.
+> These efforts have made **Apple’s platforms the safest** for consumers around the world.[4]
 
 ## And what about Fake Apps?
 
@@ -91,12 +91,15 @@ published the same application?
 [4]
 
 ## Takeaway
+
 Let's be honest, this is not the first time that malicious apps have made it into the Appstore.[6][7][8][9]  
 Apple's walled garden has far more and bigger holes than the company is willing to admit.
-But let's be honest, it's not even about security with this protective wall, it's more about monetary aspects and control.[10]
+But let's be honest, it's not even about security with this protective wall, it's more about monetary aspects and
+control.[10]
 
 As always, there is no such thing as total security.
-The best protection mechanism - and qualified mechanisms are definitely in use at Apple - are never enough if the threat is big enough.
+The best protection mechanism - and qualified mechanisms are definitely in use at Apple - are never enough if the threat
+is big enough.
 
 Security is and remains a process in a continuous control loop, that necessitates ongoing adaptions and corrections.
 
@@ -111,11 +114,17 @@ Faire digitale Märkte, Europäische Komission</a>
 Who are the gatekeepers?, European Comission</a>  
 <a href="https://support.apple.com/en-us/118110" target="_blank">[3] - About alternative app marketplaces in the
 European Union, Apple</a>  
-<a href="https://developer.apple.com/app-store/review/guidelines/" target="_blank">[4] - About alternative app
-marketplaces in the European Union, Apple</a>  
-<a href="https://blog.lastpass.com/2024/02/warning-fraudulent-app-impersonating-lastpass-currently-available-in-apple-app-store/" target="_blank">[5] - Warning: Fraudulent App Impersonating LastPass Currently Available in Apple App Store, Lastpass, Mike Kosak</a>  
-<a href="https://www.helpnetsecurity.com/2019/10/24/ad-fraud-ios/" target="_blank">[6] - 18 iOS apps with stealthy ad clicking code removed from App Store, Help NET Security, Zeljka Zorz</a>  
-<a href="https://unit42.paloaltonetworks.com/malware-xcodeghost-infects-39-ios-apps-including-wechat-affecting-hundreds-of-millions-of-users/" target="_blank">[7] - Malware XcodeGhost Infects 39 iOS Apps, Including WeChat, Affecting Hundreds of Millions of Users, Unit42, Claud Xiao</a>  
-<a href="https://www.usenix.org/conference/usenixsecurity13/technical-sessions/presentation/wang_tielei" target="_blank">[8] - Jekyll on iOS: When Benign Apps Become Evil, Usenix</a>  
-<a href="https://www.jamf.com/blog/ios-trojan-malware/" target="_blank">[9] - Trojan malware infecting 17 apps on the App Store, Jamf Blog</a>  
-<a href="https://appleinsider.com/articles/23/01/08/the-cost-of-doing-business-apples-app-store-fees-explained" target="_blank">[10] - Every Apple App Store fee, explained: How much, for what, and when, appleinsider, Alex Baggott</a>  
+<a href="https://developer.apple.com/app-store/review/guidelines/" target="_blank">[4] - App Review Guidelines, Apple</a>  
+<a href="https://blog.lastpass.com/2024/02/warning-fraudulent-app-impersonating-lastpass-currently-available-in-apple-app-store/" target="_blank">[5] -
+Warning: Fraudulent App Impersonating LastPass Currently Available in Apple App Store, Lastpass, Mike Kosak</a>  
+<a href="https://www.helpnetsecurity.com/2019/10/24/ad-fraud-ios/" target="_blank">[6] - 18 iOS apps with stealthy ad
+clicking code removed from App Store, Help NET Security, Zeljka Zorz</a>  
+<a href="https://unit42.paloaltonetworks.com/malware-xcodeghost-infects-39-ios-apps-including-wechat-affecting-hundreds-of-millions-of-users/" target="_blank">[7] -
+Malware XcodeGhost Infects 39 iOS Apps, Including WeChat, Affecting Hundreds of Millions of Users, Unit42, Claud
+Xiao</a>  
+<a href="https://www.usenix.org/conference/usenixsecurity13/technical-sessions/presentation/wang_tielei" target="_blank">[8] -
+Jekyll on iOS: When Benign Apps Become Evil, Usenix</a>  
+<a href="https://www.jamf.com/blog/ios-trojan-malware/" target="_blank">[9] - Trojan malware infecting 17 apps on the
+App Store, Jamf Blog</a>  
+<a href="https://appleinsider.com/articles/23/01/08/the-cost-of-doing-business-apples-app-store-fees-explained" target="_blank">[10] -
+Every Apple App Store fee, explained: How much, for what, and when, appleinsider, Alex Baggott</a>  
