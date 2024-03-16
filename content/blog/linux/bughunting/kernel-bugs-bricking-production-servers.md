@@ -1,5 +1,5 @@
 ---
-title: When a Kernel Bug bricks your Production Servers
+title: Bug Hunting - E01 - When a Kernel Bug bricks your Production Servers
 description: This article explores how one missing instruction set flag can bring a whole production server to a grinding halt. 
 date: 2023-09-21
 tags:
@@ -12,6 +12,7 @@ tags:
   - bug
   - aes
   - avx
+  - 'bug hunting'
 ---
 
 ## When all the Alarms went of
