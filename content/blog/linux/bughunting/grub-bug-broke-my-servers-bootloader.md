@@ -12,8 +12,8 @@ tags:
   - server
 ---
 
-_This Article serves as a chronicle recapitulation of the events that took place over the course of last saturday (
-09.03.24)._
+_This Article serves as a chronicle recapitulation of the events that took place over the course of last saturday
+(09.03.24)._
 
 ## What happened?
 
@@ -124,7 +124,8 @@ done
 {% endhighlight %}
 
 And there it was, right in front of my eyes, the cryptic error
-message `grub-probe: error: compression algorithm inherit not supported`.
+message  
+`grub-probe: error: compression algorithm inherit not supported`.
 
 ## An annoying GRUB Bug
 
@@ -138,7 +139,7 @@ grub-core/kern/fs.c:79:fs: error: compression algorithm inherit not supported
 {% endhighlight %}[5]
 
 The underlying root cause is that a nasty bug in grub leads to grub-prober (grubs detection mechanism for boot
-partitions) to no longer detect the zfs boot partition if the top level pool is snapshotted.  
+partitions) to no longer detect the zfs boot partition if the top level pool wass snapshotted (potentially only once).  
 As you have witnessed above, I did deploy regular snapshots on a regular basis.
 What frightens me is the fact, that this bugs seems not to occur every time since I do snapshots of bpool since the
 server is up and running and were confronted by this bug only months later.
