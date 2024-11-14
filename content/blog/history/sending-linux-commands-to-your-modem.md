@@ -1,6 +1,6 @@
 ---
-title: Hidden embedded Linux in your 5G modem? Send over Commands as Root!
-description: The AT commands standard sets the basis for communication between modems and their host. This standard allows for sending over commands to the embedded linux. Lets talk about that.
+title: Exposed Shell in your 5G modem? Send over Commands as Root!
+description: The AT commands standard sets the basis for communication between modems and their host. This standard allows for sending over commands to the host. Lets talk about that.
 date: 2023-10-01
 tags:   
   - AT
@@ -47,7 +47,7 @@ One of the more interesting and widely-used variant is the following:
 AT+LINUXCMD=
 {% endhighlight %}
 
-This functionality permits the sending of instructions to a Linux instance within the modem's firmware, independent of the visible operating system of the device.[2]
+This functionality permits the sending of instructions trough modem's firmware to be executed on the host, bypassing the security controls of the operating system of the device.[2]
 As we shall observe in the forthcoming examples, employing this particular instruction to obtain RCE may not even be necessary.
 
 ## Vulnerabilities and Attack Vectors
