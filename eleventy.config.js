@@ -72,6 +72,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addFilter("homeserverSeriesPosts", filterPosts("selfhosting and your homeserver"));
     eleventyConfig.addFilter("trustProblemsSeriesPosts", filterPosts("trust problems"));
     eleventyConfig.addFilter("bugHuntingSeriesPosts", filterPosts("bug hunting"));
+    eleventyConfig.addFilter("phdSeriesPosts", filterPosts("phd"));
 
     // Customize Markdown library settings:
     eleventyConfig.amendLibrary("md", mdLib => {
